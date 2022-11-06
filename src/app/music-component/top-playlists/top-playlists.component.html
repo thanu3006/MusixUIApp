@@ -1,0 +1,25 @@
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-lg-3 mt-3 mb-3">
+            <div class="box" style="background-color:rgb(26, 34, 31) ;">
+
+                <!-- <div class="artist">{{music.artist.['#text']}}</div> -->
+                <h3 class="name mt-2 mb-2" style="color:aliceblue"><b>{{music.name}}</b></h3>
+                <p style="color:aliceblue"><b>ArtistName: </b>{{music.artistName}}</p>
+                <p style="color:aliceblue"><b>AlbumName: </b>{{music.albumName}}</p>
+                <audio controls muted>
+                    <source src="{{music.previewURL}}" type="audio/ogg">
+                    <source src="{{music.previewURL}}" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio><br>
+                <button *ngIf="!favCheck" class="add-button" mat-raised-button color="primary"
+                    (click)="addToFavouriteList()">Add to favourites</button>
+                <button *ngIf="favCheck" class="delete-button" mat-raised-button color="warn"
+                    (click)="deleteMusicFav()">Delete</button>
+            </div>
+
+        </div>
+          
+    </div>
+
+</div>
